@@ -1,85 +1,69 @@
 ﻿using System;
 
-namespace Mondaystask
+namespace ConsoleApp2
 {
     class Program
     {
         static void Main(string[] args)
         {
-
-
-/*
-            char letter;
-            letter = 'a';
-            Console.WriteLine("Hello World!");
-            double length, height;
-            Console.WriteLine("Enter the length of the triangle in m");
-            length = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Enter height of the triangle in m");
-            height = Convert.ToDouble(Console.ReadLine());
-            double area = 0.5 * length * height;
-            Console.WriteLine(area);
-
-
-            Console.WriteLine("enter the first number");
-            int number1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("enter second number");
-            int number2 = Convert.ToInt32(Console.ReadLine());
-            if (number1 > number2)
+            Console.WriteLine("Enter the first number");
+            int firstnumber = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the second number");
+            int secondnumber = int.Parse(Console.ReadLine());
+            if (firstnumber > secondnumber)
             {
-                Console.WriteLine("number1 is greator than number2");
+                Console.WriteLine("First number is greater than second number");
             }
-            else if (number2 > number1)
+            else if (secondnumber > firstnumber)
             {
-                Console.WriteLine("number2 is greator than number1");
+                Console.WriteLine("Second number is greater than first number");
             }
-
             else
             {
-                Console.WriteLine("number2 is equal to number1");
-            }*/
+                Console.WriteLine("The two numbers are equal");
+            }
 
-            string name = "charity";
-            string password = "charity1234";
-            Console.WriteLine("enter your name");
+
+            string password = "2288shiks";
+            string name = "Humphry";
+            Console.WriteLine("Enter name");
             string name1 = Console.ReadLine();
-            Console.WriteLine("enter your password");
+            Console.WriteLine("Enter password");
             string password1 = Console.ReadLine();
-            if( (name1==name)&&(password1==password))
+            if ((name != name1) && (password != password1))
             {
-                Console.WriteLine("welcome");
+                Console.WriteLine("Invalid name or password");
+                Console.WriteLine("Try again");
             }
             else
             {
-                Console.WriteLine("log in unsuccessful,you have 2 attempts");
-                Console.WriteLine("enter your name");
-                string name2 = Console.ReadLine();
-                Console.WriteLine("enter your password");
-                string password2 = Console.ReadLine();
-                if ((name2 == name) && (password2 == password))
-                {
-                    Console.WriteLine("welcome");
-                }
-                else
-                {
-                    Console.WriteLine("log in unsuccessful,you have 1 attempt");
-                    Console.WriteLine("enter your name");
-                    string name3 = Console.ReadLine();
-                    Console.WriteLine("enter your password");
-                    string password3 = Console.ReadLine();
-                    if ((name3 == name) && (password3 == password))
-                    {
-                        Console.WriteLine("welcome");
-                    }
-                    else
-                    {
-                        Console.WriteLine("You have exhausted,Blocked");
-
-                    }
-
-                }
+                Console.WriteLine("Welcome , enjoy your code");
             }
 
+            Console.WriteLine("Enter any number");
+          int number = int.Parse(Console.ReadLine());
+          switch (number)
+          {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 9:
+                    Console.WriteLine("The number is odd");
+                    break;
+
+                case 2:
+                case 4:
+                case 6:
+                case 8:
+                Console.WriteLine("The number is even");
+                    break;
+                default:
+                    Console.WriteLine("The number you entered is out of bounds between 1 and 9");
+                    break;
+                    ;
+            }
         }
+      
     }
 }
